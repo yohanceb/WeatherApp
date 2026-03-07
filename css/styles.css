@@ -1,0 +1,62 @@
+@import url('tokens.css');
+
+body {
+    background-color: var(--bg-app);
+    color: var(--text-main);
+    font-family: var(--pr-font-family); /* Montserrat */
+}
+
+/* Hero Card Styling */
+.hero-section {
+    background: linear-gradient(180deg, #A1C4FD 0%, #C2E9FB 100%);
+    border-radius: var(--radius-main-card); /* 32px */
+    padding: 2.5rem;
+    color: var(--text-main);
+}
+
+.main-temp {
+    font-size: var(--pr-font-size-36); /* 36px */
+    font-weight: 700;
+}
+
+/* Air Quality Glassmorphism */
+.air-quality-card {
+    background: var(--surface-glass); /* Navy Blue 80% */
+    border-radius: var(--radius-widget); /* 16px */
+    padding: 1rem;
+    font-size: var(--pr-font-size-12); /* 12px */
+}
+
+.progress-bar {
+    height: 4px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 2px;
+}
+
+.progress-bar .fill {
+    width: 33%;
+    height: 100%;
+    background: #4CAF50; /* Green for "Low Risk" [cite: 5] */
+}
+
+/* Forecast Interactions */
+.day-card {
+    background: var(--surface-glass);
+    border-radius: var(--radius-widget);
+    padding: 1rem;
+    text-align: center;
+}
+
+.day-card.active {
+    background: var(--pr-white);
+    color: var(--pr-black);
+}
+
+/* Custom Button using Orange 100 */
+.location-btn {
+    background: var(--accent-primary); /* Orange 100 */
+    border-radius: var(--radius-btn); /* 8px */
+    padding: 12px 24px;
+    font-weight: 600;
+    border: none;
+}

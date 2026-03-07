@@ -1,0 +1,40 @@
+:root {
+  /* --- PRIMITIVE TOKENS --- */
+  
+  /* Colors */
+  --pr-navy-100: #222831;
+  --pr-navy-80: rgba(34, 40, 49, 0.8);
+  --pr-white: #FFFFFF;
+  --pr-black: #000000;
+  --pr-orange-100: #FFB845;
+  --pr-orange-80: rgba(255, 184, 69, 0.8);
+
+  /* Typography */
+  --pr-font-family: 'Montserrat', sans-serif;
+  --pr-font-size-12: 12px;
+  --pr-font-size-14: 14px;
+  --pr-font-size-24: 24px;
+  --pr-font-size-36: 36px;
+  
+  /* Borders */
+  --pr-radius-8: 8px;
+  --pr-radius-16: 16px;
+  --pr-radius-32: 32px;
+
+  /* --- SEMANTIC TOKENS --- */
+  
+  /* Brand & UI */
+  --bg-app: var(--pr-navy-100);
+  --surface-glass: var(--pr-navy-80);
+  --accent-primary: var(--pr-orange-100);
+  
+  /* Functional Text */
+  --text-main: var(--pr-white);
+  --text-muted: rgba(255, 255, 255, 0.6);
+  --text-dark: var(--pr-black);
+  
+  /* Component Radii */
+  --radius-main-card: var(--pr-radius-32);
+  --radius-widget: var(--pr-radius-16);
+  --radius-btn: var(--pr-radius-8);
+}
