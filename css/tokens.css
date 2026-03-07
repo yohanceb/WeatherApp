@@ -9,8 +9,10 @@
   --pr-orange-100: #FFB845;
   --pr-orange-80: rgba(255, 184, 69, 0.8);
 
+ --font-family-montserrat: 'Montserrat', sans-serif;
+
   /* Typography */
-  --pr-font-family: 'Montserrat', sans-serif;
+  --pr-font-family: var(--font-family-montserrat);
   --pr-font-size-12: 12px;
   --pr-font-size-14: 14px;
   --pr-font-size-24: 24px;
