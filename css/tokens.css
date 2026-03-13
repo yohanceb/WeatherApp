@@ -1,42 +1,42 @@
 :root {
-  /* --- PRIMITIVE TOKENS --- */
-  
-  /* Colors */
-  --pr-navy-100: #222831;
-  --pr-navy-80: rgba(34, 40, 49, 0.8);
-  --pr-white: #FFFFFF;
-  --pr-black: #000000;
-  --pr-orange-100: #FFB845;
-  --pr-orange-80: rgba(255, 184, 69, 0.8);
+  /* Colors - Primitive */
+  --navy-blue-100: #222831;
+  --navy-blue-80: rgba(34, 40, 49, 0.8);
+  --white-slate-100: #FFFFFF;
+  --black-coal-100: #000000;
+  --orange-100: #FFB845;
+  --orange-80: rgba(255, 184, 69, 0.8);
 
- --font-family-montserrat: 'Montserrat', sans-serif;
+  /* Semantic - The "Logic" tokens */
+  --app-background: var(--white-slate-100); /* Light mode default */
+  --font-heading-medium: var(--font-size-36);
+
+  /* Boarders (Spelling matches your Figma screenshot) */
+  --boarder-radius-8: 8px;
+  --boarder-radius-16: 16px;
+  --boarder-radius-32: 32px;
 
   /* Typography */
-  --pr-font-family: var(--font-family-montserrat);
-  --pr-font-size-12: 12px;
-  --pr-font-size-14: 14px;
-  --pr-font-size-24: 24px;
-  --pr-font-size-36: 36px;
-  
-  /* Borders */
-  --pr-radius-8: 8px;
-  --pr-radius-16: 16px;
-  --pr-radius-32: 32px;
+  --font-family-main: 'Montserrat', sans-serif;
+  --font-size-12: 12px;
+  --font-size-14: 14px;
+  --font-size-24: 24px;
+  --font-size-36: 36px;
 
   /* --- SEMANTIC TOKENS --- */
   
   /* Brand & UI */
-  --bg-app: var(--pr-navy-100);
-  --surface-glass: var(--pr-navy-80);
-  --accent-primary: var(--pr-orange-100);
+  --bg-app: var(--navy-blue-100);
+  --surface-glass: var(--navy-blue-80);
+  --accent-primary: var(--orange-100);
   
   /* Functional Text */
-  --text-main: var(--pr-white);
+  --text-main: var(--white-slate-100);
   --text-muted: rgba(255, 255, 255, 0.6);
-  --text-dark: var(--pr-black);
+  --text-dark: var(--black-coal-100);
   
   /* Component Radii */
-  --radius-main-card: var(--pr-radius-32);
-  --radius-widget: var(--pr-radius-16);
-  --radius-btn: var(--pr-radius-8);
+  --radius-main-card: var(--boarder-radius-32);
+  --radius-widget: var(--boarder-radius-16);
+  --radius-btn: var(--boarder-radius-8);
 }
