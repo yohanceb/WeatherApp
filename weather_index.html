@@ -1,46 +1,95 @@
 <main class="weather-app">
-    <section class="hero-section">
-        
-        <header>
-            <h1 class="city-name">New York City, USA</h1>
-            <p class="current-date">Monday, 20 Jun 2022</p>
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-         <link rel="stylesheet" href="css/tokens.css">
-<link rel="stylesheet" href="css/styles.css">
+        <section class="hero-section">
+            <header>
+                <h1 class="day-title">Monday</h1>
+                <p class="current-date">20 Jun 2022</p>
+                <div class="location-info">
+                    <span class="location-icon">📍</span>
+                    <span>New York City, USA</span>
+                </div>
+            </header>
 
-        </header>
+            <div class="air-quality-card">
+                <div class="aq-header">
+                    <span class="aq-icon">≈</span>
+                    <span class="aq-label">AIR QUALITY</span>
+                </div>
+                <p class="aq-status">33 Low Health Risk</p>
+                <div class="progress-bar"><div class="fill"></div></div>
+                <div class="aq-footer">
+                    <span class="more-info">more info</span>
+                    <span class="arrow">›</span>
+                </div>
+            </div>
 
-        <div class="air-quality-card">
-            <span class="label">AIR QUALITY</span>
-            <p class="status">33 Low Health Risk</p>
-            <div class="progress-bar"><div class="fill"></div></div>
-        </div>
+            <div class="main-weather">
+                <div class="temp-display">
+                    <span class="sun-icon">☀️</span>
+                    <span class="main-temp">80 °F</span>
+                </div>
+                <p class="condition">Sunny</p>
+            </div>
 
-        <div class="main-weather">
-            <span class="main-temp">80°F</span> <p class="condition">Sunny</p> </div>
+            <div class="sun-schedule">
+                <div class="sun-item">
+                    <span class="sunrise-icon">🌅</span>
+                    <div>
+                        <span class="label">Sunrise</span>
+                        <strong>6:25am</strong>
+                    </div>
+                </div>
+                <div class="sun-item">
+                    <span class="sunset-icon">🌅</span>
+                    <div>
+                        <span class="label">Sunset</span>
+                        <strong>8:48pm</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <div class="sun-schedule">
-            <div class="sun-item"><span>Sunrise</span> <strong>6:25am</strong></div>
-            <div class="sun-item"><span>Sunset</span> <strong>8:48pm</strong></div>
-        </div>
-    </section>
+        <section class="side-panel">
+            <div class="environmental-stats">
+                <div class="stat">
+                    <span class="stat-label">PRECIPITATION</span>
+                    <span class="stat-value">0%</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">HUMIDITY</span>
+                    <span class="stat-value">42%</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">WIND</span>
+                    <span class="stat-value">3 km/h</span>
+                </div>
+            </div>
 
-    <section class="side-panel">
-        <div class="environmental-stats">
-            <div class="stat"><span>PRECIPITATION</span> <span>0%</span></div>
-            <div class="stat"><span>HUMIDITY</span> <span>42%</span></div>
-            <div class="stat"><span>WIND</span> <span>3 km/h</span></div>
-        </div>
+            <div class="forecast-row">
+                <div class="day-card active">
+                    <span class="weather-icon">☀️</span>
+                    <p class="day-name">Tue</p>
+                    <strong class="temp">30°C</strong>
+                </div>
+                <div class="day-card">
+                    <span class="weather-icon">☁️</span>
+                    <p class="day-name">Wed</p>
+                    <strong class="temp">22°C</strong>
+                </div>
+                <div class="day-card">
+                    <span class="weather-icon">🌧️</span>
+                    <p class="day-name">Thu</p>
+                    <strong class="temp">06°C</strong>
+                </div>
+                <div class="day-card">
+                    <span class="weather-icon">☀️</span>
+                    <p class="day-name">Fri</p>
+                    <strong class="temp">26°C</strong>
+                </div>
+            </div>
 
-        <div class="forecast-row">
-            <div class="day-card active"><p>Tue</p><strong>30°C</strong></div>
-            <div class="day-card"><p>Wed</p><strong>22°C</strong></div>
-            <div class="day-card"><p>Thu</p><strong>06°C</strong></div>
-            <div class="day-card"><p>Fri</p><strong>26°C</strong></div>
-        </div>
-
-        <button class="location-btn">New York City</button>
-    </section>
-</main>
+            <button class="location-btn">
+                <span class="btn-icon">📍</span>
+                New York City
+            </button>
+        </section>
+    </main>

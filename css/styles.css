@@ -1,91 +1,310 @@
 @import url('tokens.css');
 
-body {
-    background-color: var(--app-background); /* Uses your Figma 'Light' or 'Dark' token */
-    font-family: var(--font-family-montserrat);
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1a2332;
+    font-family: 'Montserrat', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    padding: 20px;
 }
 
-/* 5. Hero Section Text */
+.weather-app {
+    display: flex;
+    width: 1000px;
+    height: 600px;
+    background-color: #2a3f5f;
+    border-radius: 32px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* HERO SECTION - LEFT SIDE */
 .hero-section {
-    flex: 1;
-    background: var(--accent-primary); /* Your Blue/Orange gradient */
-    padding: 40px;
-    color: var(--white-slate-100); /* White text for the blue side */
-}
-.main-temp {
-    font-size: var(--pr-font-size-36); /* 36px */
-    font-weight: 700;
+    flex: 0 0 45%;
+    background: linear-gradient(135deg, #7dd3c0 0%, #60a5fa 100%);
+    padding: 40px 30px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
 }
 
-/* Air Quality Glassmorphism */
+/* HEADER */
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.day-title {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.current-date {
+    font-size: 18px;
+    font-weight: 400;
+    opacity: 0.95;
+}
+
+.location-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+.location-icon {
+    font-size: 20px;
+}
+
+/* AIR QUALITY CARD */
 .air-quality-card {
-    background: var(--surface-glass); /* Navy Blue 80% */
-    border-radius: var(--radius-widget); /* 16px */
-    padding: 1rem;
-    font-size: var(--pr-font-size-12); /* 12px */
+    background: rgba(34, 40, 49, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.aq-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.aq-icon {
+    font-size: 16px;
+}
+
+.aq-label {
+    letter-spacing: 0.5px;
+}
+
+.aq-status {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
 }
 
 .progress-bar {
-    height: 4px;
-    background: rgba(255,255,255,0.2);
-    border-radius: 2px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 12px;
 }
 
 .progress-bar .fill {
     width: 33%;
     height: 100%;
-    background: #4CAF50; /* Green for "Low Risk" [cite: 5] */
+    background: linear-gradient(90deg, #4ade80 0%, #22c55e 100%);
+    border-radius: 3px;
 }
 
-/* Forecast Interactions */
+.aq-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.more-info {
+    opacity: 0.8;
+}
+
+.arrow {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* MAIN WEATHER */
+.main-weather {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.temp-display {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.sun-icon {
+    font-size: 60px;
+}
+
+.main-temp {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.condition {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+/* SUN SCHEDULE */
+.sun-schedule {
+    display: flex;
+    gap: 40px;
+}
+
+.sun-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.sunrise-icon,
+.sunset-icon {
+    font-size: 40px;
+}
+
+.sun-item div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.sun-item .label {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.sun-item strong {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* SIDE PANEL - RIGHT SIDE */
+.side-panel {
+    flex: 1;
+    background: #2a3f5f;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+}
+
+/* ENVIRONMENTAL STATS */
+.environmental-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stat-label {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.stat-value {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* FORECAST ROW */
 .forecast-row {
-    display: flex; /* Makes the day-cards sit in a row */
-    justify-content: space-between; /* Spreads cards evenly */
-    gap: 12px; /* Adds space between the cards */
-    margin: 20px 0;
+    display: flex;
+    gap: 16px;
+    margin: 30px 0;
 }
 
-/* 4. Fix the Individual Day Cards */
 .day-card {
     flex: 1;
-    background: var(--white-slate-100); /* White background for the cards */
-    padding: 15px;
-    border-radius: var(--boarder-radius-16);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 16px;
     text-align: center;
-    color: var(--navy-blue-100); /* Dark text on white cards */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.day-card:hover {
+    background: rgba(255, 255, 255, 0.15);
 }
 
 .day-card.active {
-    background: var(--pr-white);
-    color: var(--pr-black);
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    color: #1a1a1a;
+    border: none;
 }
 
-/* Custom Button using Orange 100 */
+.weather-icon {
+    font-size: 32px;
+}
+
+.day-name {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+    opacity: 0.9;
+}
+
+.day-card.active .day-name {
+    opacity: 1;
+}
+
+.temp {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* LOCATION BUTTON */
 .location-btn {
-  background-color: var(--orange-100);
-  border-radius: var(--boarder-radius-8);
-  font-size: var(--font-size-14);
-  font-weight: bold;
-}
-
-/* 2. Fix the Main Container */
-.weather-app {
+    background: linear-gradient(135deg, #7dd3c0 0%, #60a5fa 100%);
+    border: none;
+    border-radius: 16px;
+    padding: 14px 20px;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
     display: flex;
-    width: 900px;
-    height: 500px;
-    background-color: var(--navy-blue-100); /* Dark panel background */
-    border-radius: var(--boarder-radius-32);
-    overflow: hidden;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
 }
 
+.location-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
 
-
-h1 {
-  font-size: var(--font-heading-medium);
+.btn-icon {
+    font-size: 18px;
 }

@@ -6,9 +6,12 @@
   --black-coal-100: #000000;
   --orange-100: #FFB845;
   --orange-80: rgba(255, 184, 69, 0.8);
+  --cyan-100: #7dd3c0;
+  --blue-100: #60a5fa;
+  --dark-bg: #2a3f5f;
 
   /* Semantic - The "Logic" tokens */
-  --app-background: var(--white-slate-100); /* Light mode default */
+  --app-background: var(--white-slate-100);
   --font-heading-medium: var(--font-size-36);
 
   /* Boarders (Spelling matches your Figma screenshot) */
@@ -18,10 +21,13 @@
 
   /* Typography */
   --font-family-main: 'Montserrat', sans-serif;
+  --font-family-montserrat: 'Montserrat', sans-serif;
   --font-size-12: 12px;
   --font-size-14: 14px;
   --font-size-24: 24px;
   --font-size-36: 36px;
+  --pr-font-size-12: 12px;
+  --pr-font-size-36: 36px;
 
   /* --- SEMANTIC TOKENS --- */
   
@@ -29,6 +35,8 @@
   --bg-app: var(--navy-blue-100);
   --surface-glass: var(--navy-blue-80);
   --accent-primary: var(--orange-100);
+  --pr-white: #FFFFFF;
+  --pr-black: #000000;
   
   /* Functional Text */
   --text-main: var(--white-slate-100);
