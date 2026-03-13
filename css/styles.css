@@ -1,19 +1,22 @@
 @import url('tokens.css');
 
 body {
-    background-color: var(--bg-app);
-    color: var(--text-main);
-    font-family: var(--pr-font-family); /* Montserrat */
+    background-color: var(--app-background); /* Uses your Figma 'Light' or 'Dark' token */
+    font-family: var(--font-family-montserrat);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
-/* Hero Card Styling */
+/* 5. Hero Section Text */
 .hero-section {
-    background: linear-gradient(180deg, #A1C4FD 0%, #C2E9FB 100%);
-    border-radius: var(--radius-main-card); /* 32px */
-    padding: 2.5rem;
-    color: var(--text-main);
+    flex: 1;
+    background: var(--accent-primary); /* Your Blue/Orange gradient */
+    padding: 40px;
+    color: var(--white-slate-100); /* White text for the blue side */
 }
-
 .main-temp {
     font-size: var(--pr-font-size-36); /* 36px */
     font-weight: 700;
@@ -40,11 +43,21 @@ body {
 }
 
 /* Forecast Interactions */
+.forecast-row {
+    display: flex; /* Makes the day-cards sit in a row */
+    justify-content: space-between; /* Spreads cards evenly */
+    gap: 12px; /* Adds space between the cards */
+    margin: 20px 0;
+}
+
+/* 4. Fix the Individual Day Cards */
 .day-card {
-    background: var(--surface-glass);
-    border-radius: var(--radius-widget);
-    padding: 1rem;
+    flex: 1;
+    background: var(--white-slate-100); /* White background for the cards */
+    padding: 15px;
+    border-radius: var(--boarder-radius-16);
     text-align: center;
+    color: var(--navy-blue-100); /* Dark text on white cards */
 }
 
 .day-card.active {
@@ -54,9 +67,25 @@ body {
 
 /* Custom Button using Orange 100 */
 .location-btn {
-    background: var(--accent-primary); /* Orange 100 */
-    border-radius: var(--radius-btn); /* 8px */
-    padding: 12px 24px;
-    font-weight: 600;
-    border: none;
+  background-color: var(--orange-100);
+  border-radius: var(--boarder-radius-8);
+  font-size: var(--font-size-14);
+  font-weight: bold;
+}
+
+/* 2. Fix the Main Container */
+.weather-app {
+    display: flex;
+    width: 900px;
+    height: 500px;
+    background-color: var(--navy-blue-100); /* Dark panel background */
+    border-radius: var(--boarder-radius-32);
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+}
+
+
+
+h1 {
+  font-size: var(--font-heading-medium);
 }
